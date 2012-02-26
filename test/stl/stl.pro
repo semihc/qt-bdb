@@ -8,8 +8,15 @@ CONFIG  += qtestlib
 TARGET = test_stl
 DESTDIR = $$PRJ_BIN
 
-unix:LIBS += -L$$PRJ_BDB/lib $$PRJ_BDB/lib/libdb_stl.a -ldb_cxx -ldb
-win32:LIBS += -L$$PRJ_BDB/lib -ldb_stl -ldb_cxx -ldb
+win32 {
+ LIBS += $$PRJ_BDB_LIB/libdb_stl53d.lib $$PRJ_BDB_LIB/libdb53d.lib
+ SOURCES += $$PRJ_BDB_SRC/clib/getopt.c
+ DEFINES -= UNICODE
+}
+else {
+ # unix
+ LIBS += -L$$PRJ_BDB/lib $$PRJ_BDB/lib/libdb_stl.a -ldb_cxx -ldb
+}
 
 
 

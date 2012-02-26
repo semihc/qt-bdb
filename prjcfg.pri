@@ -55,13 +55,25 @@ isQmkDebug() {
 # Now transfer project configuration tokens into CONFIG
 CONFIG *= $$PRJ_CONFIG
 
-# Use PRJ_BDB variable as the pointer to internal BDB root directory
-PRJ_BDB = $$PRJ_ROOT/bdb
+# Use PRJ_BDB_ROOT variable as the pointer to internal BDB root directory
+PRJ_BDB_ROOT = $$PRJ_ROOT/bdb
+PRJ_BDB = $$PRJ_BDB_ROOT/db-5.3.15
 isQmkDebug() {
+ message(PRJ_BDB_ROOT = $$PRJ_BDB_ROOT)
  message(PRJ_BDB = $$PRJ_BDB)
 }
-DEPENDPATH += . $$PRJ_BDB/include
-INCLUDEPATH += . $$PRJ_BDB/include
+win32 {
+ PRJ_BDB_SRC = $$PRJ_BDB/src
+ PRJ_BDB_LANG = $$PRJ_BDB/lang	
+ PRJ_BDB_LIB = $$PRJ_BDB/build_windows/Win32/Debug
+
+ INCLUDEPATH += . $$PRJ_BDB/build_windows $$PRJ_BDB/lang/cxx/stl
+ LIBS += -L$$PRJ_BDB_LIB
+}
+else {
+ DEPENDPATH += . $$PRJ_BDB/include
+ INCLUDEPATH += . $$PRJ_BDB/include
+}
 
 
 } # end of include guard
