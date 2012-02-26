@@ -13,13 +13,9 @@ win32 {
  DEFINES -= UNICODE
 }
 else {
- LIBS += -L$$PRJ_BDB/lib -ldb_sql -ldb
+ LIBS += -ldb_sql -ldb
 }
 
-
-datafiles.path = $$PRJ_BIN
-datafiles.files = country.csv sms.csv university.csv
-INSTALLS += datafiles
 
 # Input
 HEADERS += ex_sql_utils.h TestRunner.hh

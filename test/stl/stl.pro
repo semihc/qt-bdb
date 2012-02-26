@@ -15,7 +15,7 @@ win32 {
 }
 else {
  # unix
- LIBS += -L$$PRJ_BDB/lib $$PRJ_BDB/lib/libdb_stl.a -ldb_cxx -ldb
+ LIBS += $$PRJ_BDB_LIB/libdb_stl.a -ldb_cxx -ldb
 }
 
 

@@ -62,6 +62,7 @@ isQmkDebug() {
  message(PRJ_BDB_ROOT = $$PRJ_BDB_ROOT)
  message(PRJ_BDB = $$PRJ_BDB)
 }
+
 win32 {
  PRJ_BDB_SRC = $$PRJ_BDB/src
  PRJ_BDB_LANG = $$PRJ_BDB/lang	
@@ -71,8 +72,11 @@ win32 {
  LIBS += -L$$PRJ_BDB_LIB
 }
 else {
- DEPENDPATH += . $$PRJ_BDB/include
- INCLUDEPATH += . $$PRJ_BDB/include
+ PRJ_BDB_LIB = $$PRJ_BDB_ROOT/lib
+
+ DEPENDPATH += . $$PRJ_BDB_ROOT/include
+ INCLUDEPATH += . $$PRJ_BDB_ROOT/include
+ LIBS += -L$$PRJ_BDB_LIB
 }
 
 

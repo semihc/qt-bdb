@@ -17,10 +17,10 @@ export QMKBLD QMK_DEBUG QMAKEFEATURES
 export PRJ_ROOT=$HOME/qt-bdb
 
 # Berkeley DB root directory
-export PRJ_BDB=$PRJ_ROOT/bdb
+export PRJ_BDB_ROOT=$PRJ_ROOT/bdb
 
 export LD_LIBRARY_PATH=$PRJ_BDB/lib:$LD_LIBRARY_PATH
 
 # Give feedback about project directories
 echo "PRJ_ROOT=$PRJ_ROOT"
-echo "PRJ_BDB=$PRJ_BDB"
+echo "PRJ_BDB_ROOT=$PRJ_BDB_ROOT"

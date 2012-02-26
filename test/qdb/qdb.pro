@@ -14,7 +14,7 @@ win32 {
  DEFINES -= UNICODE
 }
 else {
- LIBS += -L$$PRJ_BDB/lib -ldb_sql $$PRJ_BDB/lib/libdb_stl.a -ldb_cxx -ldb
+ LIBS += -ldb_sql $$PRJ_BDB_LIB/libdb_stl.a -ldb_cxx -ldb
 }
 
 

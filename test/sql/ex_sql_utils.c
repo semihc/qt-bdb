@@ -184,7 +184,7 @@ const sample_data university_sample_data = {
 		"\t\trich       int,\n"
 		"\t\tscholar    int\n"
 	 "\t);",
-	"../examples/sql/data/university.csv", 9};
+	"../test/sql/data/university.csv", 9};
 
 /*
  * Here is the definition of the country sample table. As we can see from 
@@ -203,7 +203,7 @@ const sample_data country_sample_data = {
 		"\tTop_500    int,\n"
 		"\tTop_1000   int\n"
 	"\t);\n",
-	"../examples/sql/data/country.csv", 6};
+	"../test/sql/data/country.csv", 6};
 
 static char items[TABLE_COLS][BUF_SIZE];
 

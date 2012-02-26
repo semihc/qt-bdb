@@ -13,7 +13,7 @@ win32 {
  DEFINES -= UNICODE
 }
 else {
- LIBS += -L$$PRJ_BDB/lib -ldb_cxx -ldb
+ LIBS += -ldb_cxx -ldb
 }
 
 datafiles.path = $$PRJ_BIN
