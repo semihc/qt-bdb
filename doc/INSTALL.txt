@@ -1,0 +1,35 @@
+
+BUILDING
+~~~~~~~~
+
+Unix
+~~~~
+# Execute following commands on a shell
+cd qt-bdb/bdb
+build_linux.sh
+# Make sure above command completes without error
+cd ..
+qmake -r
+make
+make install
+# Use "make clean" to clean up intermediate (object etc.) files.
+# Use "make distclean" to return to clean state.
+
+Windows
+~~~~~~~
+# Execute followings con command shell
+# Make sure MS VC++ environment is set prior
+cd qt-bdb/bdb
+build_win.bat
+# Make sure above command completes without error
+cd ..
+qmake -r
+nmake
+nmake install
+# Use "nmake clean" to clean up intermediate (object etc.) files.
+# Use "nmake distclean" to return to clean state.
+
+TESTING
+~~~~~~~
+
+Execute test_* applications in the bin directory.

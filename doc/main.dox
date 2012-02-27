@@ -1,0 +1,16 @@
+/*
+  This file contains NO source code, just some documentation for doxygen to
+  parse.
+  (c) Semih Cemiloglu
+*/
+
+/*!
+  \mainpage qt-bdb - Qt/Berkeley DB integration package
+
+The qt-bdb package is a thin layer around Oracle Berkeley DB. [1]
+
+\section references References
+
+[1] <a href="http://www.oracle.com/technetwork/database/berkeleydb/overview/index.html">Berkeley DB Overview</a>
+
+*/
