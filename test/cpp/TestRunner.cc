@@ -21,7 +21,7 @@ void TestRunner::load()
 
   qDebug() << "Calling db_load_main() with args" << m_args.join(" ");
   for(int i=0; i<m_args.size(); ++i)
-    list.push_back(m_args.at(i).toAscii());
+    list.push_back(m_args.at(i).toLatin1());
 
   QVector<char*> argvec;
   for(i=0; i<list.size(); ++i) 
@@ -39,7 +39,7 @@ void TestRunner::read()
 
   qDebug() << "Calling db_read_main() with args" << m_args.join(" ");
   for(int i=0; i<m_args.size(); ++i) 
-    list.push_back(m_args.at(i).toAscii());
+    list.push_back(m_args.at(i).toLatin1());
 
   QVector<char*> argvec;
   for(i=0; i<list.size(); ++i) 

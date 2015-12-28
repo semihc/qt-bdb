@@ -2,7 +2,8 @@ include( $$(QMKBLD)/root.pri )
 
 QT -= gui
 TEMPLATE = app
-CONFIG  += qtestlib 
+#CONFIG  += qtestlib 
+QT  += testlib 
 
 TARGET = test_sql
 DESTDIR = $$PRJ_BIN

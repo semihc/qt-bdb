@@ -24,7 +24,7 @@ void TestRunner::Args2Argv(const QStringList& args,
   argv.clear();
     
   for(i=0; i<args.size(); ++i)
-    argl.push_back(args.at(i).toAscii());
+    argl.push_back(args.at(i).toLatin1());
 
   for(i=0; i<argl.size(); ++i) 
     argv.push_back(argl[i].data());

@@ -7,14 +7,14 @@ rem Berkeley DB version
 set DB=db-5.3.15
 
 rem Delete the files
-del /s /q /f %DB%
+echo del /s /q /f %DB%
 
 rem Delete the directory
-rmdir /s /q %DB%
+echo rmdir /s /q %DB%
 
 rem Unpack
 rem tar xzvpf %DB%.tar.gz
-unzip %DB%.zip
+echo unzip %DB%.zip
 
 rem Build
 cd %DB%\build_windows
